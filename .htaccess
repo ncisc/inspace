@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^fran\.space$ [NC]
+RewriteRule ^ https://fran.space%{REQUEST_URI} [R=301,L]

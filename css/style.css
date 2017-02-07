@@ -1,0 +1,371 @@
+/*
+=================== Typography ===============================*/
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 112.5%; /* 100% -> 16px */
+  color: black;
+}
+p, ol, ul, blockquote, pre, code, img {
+  line-height:1.7em;
+  word-wrap:break-word;
+  margin-bottom: 1.5em;
+  text-align: justify;
+}
+p {
+  text-indent: 1.7em;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sniglet', cursive;
+  font-weight: normal;
+  word-wrap:break-word;
+  line-height:1.4em;
+  margin: 0.2em 0 0.5em 0;
+}
+h1 a, h1 a:hover, h1 a:visited{
+  color:inherit;
+  text-decoration: none;
+}
+h1 {
+  font-size: 2.286em;
+}
+h2 {
+  font-size: 2.143em;
+}
+h3 {
+  font-size: 1.714em;
+}
+h4 {
+  font-size: 1.286em;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: 0.857em;
+}
+p {font-size: 1em;}
+em {font-style: italic;}
+strong {font-weight:bold;}
+small {font-size: 0.7em; }
+blockquote, blockquote p {
+  font-size: 1em;
+  font-style: italic;
+  color: grey;
+}
+blockquote:before {content:"''";}
+blockquote:after {content:"''";}
+pre, code {padding: 0.1em 0.2em; background:#F8F8FF;}
+hr {border:0;outline:0;background:darkgrey;height:1px; margin:2em 0;clear:both;}
+
+/*
+=================== Lists ===============================*/
+ul {list-style: disc; margin-left: 0.5em;}
+ol {list-style: none; margin-left: 0.5em;}
+ol.decimal {list-style: decimal;}
+ol.lower-latin {list-style: lower-latin;}
+ul, ol {padding: 0 1.5em;}
+
+/*
+=================== Images ===============================*/
+p img {margin: 0.8em auto; display:block; max-width:100%;}
+img {max-width:100%;}
+
+/*
+=================== Table ===============================*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-left: 0;
+  /*table-layout:;*/
+  font-size: 0.95em;
+  line-height:1.2em;
+  margin-bottom: 1.5em;
+}
+table th, table td {
+  padding: .5em;
+  text-align: left;
+  vertical-align: top;
+  border-top: 0.08em solid #B1B88C;
+}
+table thead th {
+  vertical-align: bottom;
+  font-weight: bold;
+}
+table tfoot td {font-weight:bold;}
+table caption {
+  padding: 0.5em;
+  font-size: 1.1em;
+  background: ghostwhite;
+}
+/*
+=================== Links ===============================*/
+a, a:visited {color: tomato; text-decoration: none;}
+a:hover, a:focus {opacity: 0.8; text-decoration: underline;}
+/*
+=================== General structure ===============================*/
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+header, main {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  padding: 0 4%;
+  background-color: steelblue;
+  color: snow;
+}
+#header-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2% 5% 0.5% 5%;
+}
+#logo {
+  text-align: center;
+  font-size: 1.6em;
+  flex: 1 0 auto;
+}
+#logo h1 a{
+  color: snow;
+}
+main {
+  width: 70%;
+  padding: 0 2%;
+  box-sizing:border-box;
+  flex: 1;
+}
+footer {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 4%;
+  box-sizing: border-box;
+  background-color: steelblue;
+}
+#footer-content {
+  margin: 1% 0;
+  padding: 0 10% 3% 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#recent, #pages, #social {
+  margin: 0 2%;
+  padding:0 1%;
+  font-size: 0.9em;
+  flex: 3 0 auto;
+  color:snow;
+}
+#social {
+  flex: 1 0 auto;
+}
+#recent ul, #pages ul, #social ul {
+  padding: 0;
+  margin: 2% 0 0 0;
+  list-style:none;
+}
+#recent ul li, #pages ul li, #social ul li {
+  
+}
+#recent ul li a, #pages ul li a, #social ul li a {
+  color: snow;
+}
+#copyrights {
+  color: snow;
+  margin: 1% 0;
+  text-align: center;
+}
+#copyrights a {
+  color:snow;
+}
+/*
+=================== Navegation bar ===============================*/
+.navbar{
+  flex: 1 0 auto;
+  align-self: flex-end;
+}
+.navbar ul {
+  list-style:none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+}
+.navbar ul li {
+  flex: 0 1 auto;
+  padding: 0 15px;
+  font-size: 1.2em;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: snow;
+}
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+.navbar ul li .active {
+  text-decoration: underline;
+}
+/*
+=================== Article ===============================*/
+article {
+  margin: 3% 0;
+  margin-bottom: 5%;
+  padding: 0;
+}
+.info {
+  color: darkgrey;
+}
+.read-more {
+  font-style: italic;
+  color: darkgrey;
+}
+/*
+=================== Pagination ===============================*/
+.pagination {
+  margin: 2%;
+  padding: 0;
+}
+.pagination ul {
+  list-style:none;
+  margin: 2%;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: space-around;
+}
+.pagination li {
+  flex: 0 1 auto;
+}
+.pagination li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: steelblue;
+}
+.pagination li a:hover {
+  text-decoration: underline;
+}
+/*
+=================== Media Queries ===============================*/
+@media only screen and (min-width: 59.938em) {/* 959px */} 
+@media only screen and (min-width: 48em) and (max-width: 59.938em) {
+  /* 768px and 959px*/
+  main {
+    width: 80%;
+  }
+} 
+@media only screen and (min-width: 30em) and (max-width: 47.938em) {
+  /* 480 px and 767px */
+  #logo {
+    font-size: 1.4em;
+  }
+  main {
+    width: 90%;
+  }
+  #footer-content {
+    flex-direction: row;
+    padding: 0 3%;
+  }
+}
+@media only screen and (max-width: 29.938em) {
+  /* 479px */
+  #logo {
+    font-size: 1.4em;
+  }
+  main {
+    width: 90%;
+  }
+  #footer-content {
+    flex-direction: column;
+    padding: 0 2%;
+  }
+}
+/*
+=================== Fonts ===============================*/
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url("../fonts/raleway.woff") format('woff');
+}
+@font-face {
+  font-family: "Sniglet";
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sniglet Regular'), local('Sniglet-Regular'), url("../fonts/sniglet.woff") format('woff');
+}
+/*
+=================== Icons ===============================*/
+@font-face {
+  font-family: "fontawesome";
+  src:url("../fonts/fontawesome.eot");
+  src:url("../fonts/fontawesome.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/fontawesome.woff") format("woff"),
+    url("../fonts/fontawesome.ttf") format("truetype"),
+    url("../fonts/fontawesome.svg#fontawesome") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "fontawesome" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontawesome" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-rocket:before {
+  content: "\61";
+}
+.icon-calendar:before {
+  content: "\62";
+}
+.icon-folder:before {
+  content: "\63";
+}
+.icon-tags:before {
+  content: "\64";
+}
+.icon-pencil:before {
+  content: "\65";
+}
+.icon-hand-right:before {
+  content: "\66";
+}
+.icon-caret-down:before {
+  content: "\67";
+}
+.icon-caret-up-two:before {
+  content: "\68";
+}
+.icon-github:before {
+  content: "\69";
+}
+.icon-twitter:before {
+  content: "\6a";
+}
