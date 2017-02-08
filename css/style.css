@@ -7,12 +7,15 @@ body {
 }
 p, ol, ul, blockquote, pre, code, img {
   line-height:1.7em;
-  word-wrap:break-word;
+  word-wrap: break-word;
   margin-bottom: 1.5em;
   text-align: justify;
 }
 p {
   text-indent: 1.7em;
+}
+pre, code {
+  white-space: pre-wrap;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Sniglet', cursive;
